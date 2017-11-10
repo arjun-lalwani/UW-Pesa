@@ -26,6 +26,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         updateUI()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        updateNav()
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -47,7 +52,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        cell.selectionStyle = UITableViewCellSelectionStyle.none
        return cell
     }
-    // did Select Row at index path
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(69.0)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath.row == 0) {
+            performSegue(withIdentifier: "transactionsSegue", sender: self)
+        } else if (indexPath.row == 1) {
+            performSegue(withIdentifier: "sendMoneySegue", sender: self)
+        } else if (indexPath.row == 2) {
+            performSegue(withIdentifier: "payAtStoreSegue", sender: self)
+        } else if (indexPath.row == 3){
+            performSegue(withIdentifier: "generateQRCodeSegue", sender: self)
+        }
+    }
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
@@ -61,23 +81,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func updateNav() {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func updateUI() {
         
         view.backgroundColor = UIColor.customPurple
-        
+    
         // Text
         let dollarSign = NSMutableAttributedString(string: "$")
         let amount = NSMutableAttributedString(string: "73.73") // update with real value later
         let usd = NSMutableAttributedString(string: "\nBalance USD")
         
-        let customCurrencySignAttributes : [NSAttributedStringKey : Any] = [NSAttributedStringKey.foregroundColor: UIColor.customLightGray,
-                                                                            NSAttributedStringKey.font: UIFont.details]
+        let customCurrencySignAttributes = [NSAttributedStringKey.foregroundColor: UIColor.customLightGray,
+                                            NSAttributedStringKey.font: UIFont.details]
         
-        let customAmountAttributes : [NSAttributedStringKey : Any] = [NSAttributedStringKey.foregroundColor: UIColor.white,
-                                                                      NSAttributedStringKey.font: UIFont.amount]
+        let customAmountAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
+                                      NSAttributedStringKey.font: UIFont.amount]
 
-        let customCurrencyAttributes : [NSAttributedStringKey : Any] = [NSAttributedStringKey.foregroundColor: UIColor.customLightGray,
-                                                                        NSAttributedStringKey.font: UIFont.currency]
+        let customCurrencyAttributes = [NSAttributedStringKey.foregroundColor: UIColor.customLightGray,
+                                        NSAttributedStringKey.font: UIFont.customBalance24]
     
         dollarSign.addAttributes(customCurrencySignAttributes, range: NSMakeRange(0, dollarSign.length))
         amount.addAttributes(customAmountAttributes, range: NSMakeRange(0, amount.length))
@@ -95,37 +119,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if (options.count < 5) {
             self.tableView.isScrollEnabled = false
         }
-    }
-}
-
-extension UIFont {
-    class var details: UIFont {
-        return UIFont(name: "Avenir Next", size: CGFloat(48))!
+        
+        // Nav Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    class var currency: UIFont {
-        return UIFont(name: "Avenir Next", size: CGFloat(24))!
-    }
-    
-    class var amount:  UIFont {
-        return UIFont(name: "Avenir Next", size: CGFloat(72))!
-    }
-    
-    class var options: UIFont {
-        return UIFont(name: "Avenir Next", size: CGFloat(22))!
-    }
-}
-
-extension UIColor {
-    class var customLightGray: UIColor {
-        return UIColor(red: CGFloat(215.0/255.0), green: CGFloat(215.0/255.0), blue: CGFloat(215.0/255.0), alpha: CGFloat(1.0))
-    }
-    
-    class var customPurple: UIColor {
-        return UIColor(red: CGFloat(155.0/255.0), green: CGFloat(114.0/255.0), blue: CGFloat(249.0/250.0), alpha: CGFloat(1.0))
-    }
-    
-    class var customDarkPurple: UIColor {
-        return UIColor(red: CGFloat(125.0/255.0), green: CGFloat(72.0/255.0), blue: CGFloat(247.0/250.0), alpha: CGFloat(1.0))
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "transactionsSegue") {
+            let destination = segue.destination as? TransactionsViewController
+            destination?.navigationItem.title = "Transactions"
+        }
     }
 }
