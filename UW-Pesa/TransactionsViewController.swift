@@ -84,14 +84,20 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell", for: indexPath) as! HistoryTableViewCell
         
+        // Cell Data
         cell.historyDetails.text = historyModel[indexPath.section].historyDetails
         cell.amount.text = historyModel[indexPath.section].amount
         cell.time.text = historyModel[indexPath.section].transactionTime
         cell.historySummary.text = historyModel[indexPath.section].historySummary!
         
+        // Cell UI
         cell.backgroundColor = UIColor.customDarkPurple
         cell.historyDetails.textColor = UIColor.white
-        cell.amount.textColor = UIColor.white
+        if (historyModel[indexPath.section].amount.contains("-")) {
+            cell.amount.textColor = UIColor.customRedNegative
+        } else {
+            cell.amount.textColor = UIColor.customGreenPositive
+        }
         cell.time.textColor = UIColor.white
         cell.historySummary.textColor = UIColor.white
         
@@ -111,10 +117,10 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         let currency = NSMutableAttributedString(string: " USD")
         
         let customCurrencySignAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
-                                            NSAttributedStringKey.font: UIFont.customBalance36]
+                                            NSAttributedStringKey.font: UIFont.customBalance36Med]
         
         let customAmountAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
-                                      NSAttributedStringKey.font: UIFont.customBalance36]
+                                      NSAttributedStringKey.font: UIFont.customBalance36Med]
         
         let customAmountDetailsAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,
                                              NSAttributedStringKey.font: UIFont.customBalance24]
@@ -138,22 +144,11 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         currencySign.append(amount)
         
         balance.attributedText = currencySign
-        
+    
         balance.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 96)
     }
     
     private func makeRange(_ text: NSMutableAttributedString) -> NSRange {
         return NSMakeRange(0, text.length)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
