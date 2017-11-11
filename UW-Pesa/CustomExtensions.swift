@@ -49,7 +49,7 @@ extension UIColor {
     }
     
     class var customDarkPurple: UIColor {
-        return UIColor(red: CGFloat(125.0/255.0), green: CGFloat(72.0/255.0), blue: CGFloat(247.0/250.0), alpha: CGFloat(1.0))
+        return UIColor(red: CGFloat(131.0/255.0), green: CGFloat(84.0/255.0), blue: CGFloat(238/250.0), alpha: CGFloat(1.0))
     }
     
     class var customGreenPositive: UIColor {
@@ -58,14 +58,5 @@ extension UIColor {
     
     class var customRedNegative: UIColor {
         return UIColor(red: CGFloat(1.0), green: CGFloat(154.0/255.0), blue: CGFloat(154.0/250.0), alpha: CGFloat(1.0))
-    }
-}
-
-
-extension UILabel {
-    func addCharactersSpacing(spacing:CGFloat, text:String) {
-        let attributedString = NSMutableAttributedString(string: text)
-        attributedString.addAttribute(NSAttributedStringKey.kern, value: spacing, range: NSMakeRange(0, text.characters.count))
-        self.attributedText = attributedString
     }
 }

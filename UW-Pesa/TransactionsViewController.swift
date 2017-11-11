@@ -38,6 +38,7 @@ class TransactionsViewController: UIViewController, UITableViewDelegate, UITable
         historyTableView.delegate = self
         historyTableView.dataSource = self
         historyTableView.backgroundColor = UIColor.customPurple
+        historyTableView.allowsSelection = false
         
         // load dummy data
         historyModel.append(transactionModel1)
