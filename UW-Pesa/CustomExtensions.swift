@@ -26,8 +26,16 @@ extension UIFont {
         return UIFont(name: "Avenir Next", size: CGFloat(36))!
     }
     
+    class var customBalance22Med: UIFont {
+        return UIFont(name: "AvenirNext-Medium", size: CGFloat(22))!
+    }
+    
     class var customBalance36Med: UIFont {
         return UIFont(name: "AvenirNext-Medium", size: CGFloat(36))!
+    }
+    
+    class var customAmount58Med: UIFont {
+        return UIFont(name: "AvenirNext-Medium", size: CGFloat(58))!
     }
 
     class var amount:  UIFont {

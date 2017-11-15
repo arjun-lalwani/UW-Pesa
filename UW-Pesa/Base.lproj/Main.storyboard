@@ -128,16 +128,25 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="OAu-FN-bfa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FW-QC-fDC">
                                                 <rect key="frame" x="125" y="0.0" width="125" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="Fzo-uK-UvM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ9-3B-3dQ">
                                                 <rect key="frame" x="250" y="0.0" width="125" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="Eqv-9t-rLa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -158,16 +167,25 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="fKX-km-7qs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1l-eK-GQH">
                                                 <rect key="frame" x="125" y="0.0" width="125" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="izj-uG-lwf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKG-mT-Ek6">
                                                 <rect key="frame" x="250" y="0.0" width="125" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="cjx-So-uBg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -188,16 +206,25 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="e8G-zw-10R"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sS-lU-Va3">
                                                 <rect key="frame" x="125" y="0.0" width="125" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="Dro-Ul-2rP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7O-Yr-V9s">
                                                 <rect key="frame" x="250" y="0.0" width="125" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="Hql-eS-cds"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -218,16 +245,25 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="."/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="uuQ-Vq-ALL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNo-ds-O6y">
                                                 <rect key="frame" x="125" y="0.0" width="125" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="27d-xI-r5t"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eX-Vt-pGx">
                                                 <rect key="frame" x="250" y="0.0" width="125" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                                 <state key="normal" title="&lt;"/>
+                                                <connections>
+                                                    <action selector="keypadTapped:" destination="ujE-HD-KBt" eventType="touchUpInside" id="QTR-CJ-Jdl"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -251,7 +287,7 @@
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Next"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zh-Xv-afB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9zh-Xv-afB">
                                 <rect key="frame" x="16" y="156" width="343" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="H9X-cX-05G"/>
