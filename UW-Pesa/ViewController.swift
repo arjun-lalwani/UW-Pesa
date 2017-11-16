@@ -128,6 +128,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if (segue.identifier == "transactionsSegue") {
             let destination = segue.destination as? TransactionsViewController
             destination?.navigationItem.title = "Transactions"
+        } else if (segue.identifier == "sendMoneySegue") {
+            let destination = segue.destination as? AmountViewController
+            destination?.navigationItem.title = "Amount"
         }
     }
 }

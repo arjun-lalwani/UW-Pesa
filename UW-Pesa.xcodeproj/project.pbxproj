@@ -18,6 +18,7 @@
 		B4E0279D1FABD17500E2EC97 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0279C1FABD17500E2EC97 /* TransactionsViewController.swift */; };
 		B4EDF5021FB5239E00D66FE2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDF5011FB5239E00D66FE2 /* HistoryTableViewCell.swift */; };
 		B4EDF5041FB525BF00D66FE2 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDF5031FB525BF00D66FE2 /* TransactionModel.swift */; };
+		B4EECFCC1FBD4BD1009C5629 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EECFCB1FBD4BD1009C5629 /* UserNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B4E0279C1FABD17500E2EC97 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		B4EDF5011FB5239E00D66FE2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		B4EDF5031FB525BF00D66FE2 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		B4EECFCB1FBD4BD1009C5629 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				B4EDF5031FB525BF00D66FE2 /* TransactionModel.swift */,
 				B4EDF5011FB5239E00D66FE2 /* HistoryTableViewCell.swift */,
 				B41F39E21FA94A0800731D09 /* Main.storyboard */,
+				B4EECFCB1FBD4BD1009C5629 /* UserNameViewController.swift */,
 				B45183F81FB7A825001F79F1 /* AmountViewController.swift */,
 				B48DBFEE1FABF2CD0007C315 /* CustomExtensions.swift */,
 				B41F39EA1FA94A0800731D09 /* Info.plist */,
@@ -166,6 +169,7 @@
 				B4EDF5021FB5239E00D66FE2 /* HistoryTableViewCell.swift in Sources */,
 				B4EDF5041FB525BF00D66FE2 /* TransactionModel.swift in Sources */,
 				B41F39E11FA94A0800731D09 /* ViewController.swift in Sources */,
+				B4EECFCC1FBD4BD1009C5629 /* UserNameViewController.swift in Sources */,
 				B41F39DF1FA94A0800731D09 /* AppDelegate.swift in Sources */,
 				B48DBFEF1FABF2CD0007C315 /* CustomExtensions.swift in Sources */,
 				B4E0279D1FABD17500E2EC97 /* TransactionsViewController.swift in Sources */,
