@@ -89,7 +89,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         view.backgroundColor = UIColor.customPurple
     
-        // Text
+        // configures balance text
         let dollarSign = NSMutableAttributedString(string: "$")
         let amount = NSMutableAttributedString(string: "73.73") // update with real value later
         let usd = NSMutableAttributedString(string: "\nBalance USD")
@@ -124,6 +124,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    // prepare view and sets title of the next VC on nav bar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "transactionsSegue") {
             let destination = segue.destination as? TransactionsViewController
@@ -131,6 +132,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else if (segue.identifier == "sendMoneySegue") {
             let destination = segue.destination as? AmountViewController
             destination?.navigationItem.title = "Amount"
+        } else if (segue.identifier == "payAtStoreSegue") {
+            let destination = segue.destination as? AmountViewController
+            destination?.seguedFrom = "PayAtStore"
+            destination?.navigationItem.title = "Amount"
         }
     }
 }
+
+
+
+
+
+
+

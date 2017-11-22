@@ -68,8 +68,8 @@
                         <outlet property="tableView" destination="7Lc-hF-ueQ" id="CSw-N4-j3H"/>
                         <segue destination="37J-Pv-k7A" kind="show" identifier="transactionsSegue" id="DEV-Mx-iFc"/>
                         <segue destination="ujE-HD-KBt" kind="show" identifier="sendMoneySegue" id="Fib-WM-Ym1"/>
-                        <segue destination="Ht4-QY-4VE" kind="show" identifier="payAtStoreSegue" id="1y9-gy-agT"/>
                         <segue destination="k4O-fL-wbA" kind="show" identifier="generateQRCodeSegue" id="Ebe-24-ddl"/>
+                        <segue destination="ujE-HD-KBt" kind="show" identifier="payAtStoreSegue" id="fn4-E3-ckM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,21 +90,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPo-bL-i7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1497" y="682"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="f3L-LS-qK6">
-            <objects>
-                <viewController id="Ht4-QY-4VE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="agO-Vg-jIV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="DWl-8L-3mL"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uhL-yT-TVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2455" y="247"/>
         </scene>
         <!--Amount View Controller-->
         <scene sceneID="gO8-YT-hq4">
@@ -348,11 +333,27 @@
                         <outletCollection property="collectionOfButtons" destination="aNo-ds-O6y" collectionClass="NSMutableArray" id="d3h-qD-cjU"/>
                         <outletCollection property="collectionOfButtons" destination="8Q9-Dv-t2d" collectionClass="NSMutableArray" id="o5J-Bf-Xqv"/>
                         <segue destination="SOG-By-GaD" kind="show" identifier="userNameSegue" id="7JZ-u4-mJq"/>
+                        <segue destination="MMm-x0-9Tw" kind="show" identifier="QRRecieveMoneySegue" id="BtA-m9-ozk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFR-4u-dJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2453.5999999999999" y="-502.39880059970017"/>
+        </scene>
+        <!--Code Receive View Controller-->
+        <scene sceneID="VTu-hb-OUx">
+            <objects>
+                <viewController id="MMm-x0-9Tw" customClass="QRCodeReceiveViewController" customModule="UW_Pesa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j0U-9Y-ymt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="maV-kZ-gC9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0C8-H8-9WO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2454" y="351"/>
         </scene>
         <!--User Name View Controller-->
         <scene sceneID="d4L-Zg-6Ke">
@@ -498,4 +499,7 @@
             <point key="canvasLocation" x="-250" y="134"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fn4-E3-ckM"/>
+    </inferredMetricsTieBreakers>
 </document>

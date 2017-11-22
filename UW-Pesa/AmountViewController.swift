@@ -28,16 +28,19 @@ class AmountViewController: UIViewController {
     }
 
     func updateUI() {
+        
         let navBar = navigationController?.navigationBar
+        
+        // set tags for buttons and update buttons UI
         for button in collectionOfButtons! {
-            if (button.currentTitle == ".") {
+            if button.currentTitle == "." {
                 if seguedFrom == "UserName" {
                     button.setTitle("", for: .normal)
                     button.isEnabled = false
                 } else {
                     button.tag = 10
                 }
-            } else if (button.currentTitle == "<") {
+            } else if button.currentTitle == "<" {
                 button.tag = 11
             } else {
                 button.tag = Int(button.currentTitle!)!
@@ -58,6 +61,10 @@ class AmountViewController: UIViewController {
             currTextState = ""
             titleLabel.text = "Enter PIN"
             navBar?.topItem?.title = "User Name"
+        case "PayAtStore":
+            amountLabel.text = "$0.00"
+            currTextState = ""
+            titleLabel.text = "Enter Amount to Receive"
         default:
             break
         }
@@ -78,7 +85,7 @@ class AmountViewController: UIViewController {
     
     @IBAction func keypadTapped(_ sender: UIButton) {
         switch seguedFrom {
-        case "Balance":
+        case "Balance", "PayAtStore":
             updateStateForAmount(sender)
             amountLabel.text = "$\(currTextState)"
         case "UserName":
@@ -93,8 +100,11 @@ class AmountViewController: UIViewController {
         switch seguedFrom  {
         case "Balance":
             performSegue(withIdentifier: "userNameSegue", sender: self)
+        case "PayAtStore":
+            performSegue(withIdentifier: "QRRecieveMoneySegue", sender: self)
         case "UserName":
               print(pinEntered)
+              
               // Dummy Alert
               let alert = UIAlertController(title: "Transfer Complete", message: "Transfer Amount = $7.60 + Fee = $25.89", preferredStyle: .alert)
               let cancel = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
@@ -108,18 +118,22 @@ class AmountViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "userNameSegue") {
+        if segue.identifier == "userNameSegue" {
             let destination = segue.destination as? UserNameViewController
             destination?.navigationItem.title = "User Name"
+        } else if segue.identifier == "QRRecieveMoneySegue" {
+            let destination = segue.destination as? QRCodeReceiveViewController
+            destination?.navigationItem.title = "QR Code"
         }
     }
     
+    // updates current state depending on segueFrom
     private func updateStateForAmount(_ sender: UIButton) {
         let title = sender.currentTitle!
-        if (currTextState == "0.00") {
-            if (sender.tag == 10) {
+        if currTextState == "0.00" {
+            if sender.tag == 10 {
                 currTextState = "0."
-            } else if (sender.tag == 11) {
+            } else if sender.tag == 11 {
                 currTextState = "0.00"
             } else {
                 currTextState = title
@@ -127,11 +141,11 @@ class AmountViewController: UIViewController {
         } else {
             switch sender.tag {
             case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9:
-                if (currTextState.count > 15) { break }
+                if currTextState.count > 15 { break }
                 currTextState.append(title)
             case 10:
-                if (currTextState.count > 15) { break }
-                if (currTextState.range(of: ".") == nil) {
+                if currTextState.count > 15 { break }
+                if currTextState.range(of: ".") == nil {
                     currTextState.count == 0 ? currTextState.append("0\(title)") : currTextState.append(title)
                 }
             case 11:
@@ -146,7 +160,7 @@ class AmountViewController: UIViewController {
         let title = sender.currentTitle!
         switch sender.tag {
         case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9:
-            if (currTextState.count > 3) { break }
+            if currTextState.count > 3 { break }
             currTextState.append("\u{25CF}")
             pinEntered.append(title)
         case 11:
