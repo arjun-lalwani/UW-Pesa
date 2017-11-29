@@ -16,6 +16,8 @@
 		B45183F91FB7A825001F79F1 /* AmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45183F81FB7A825001F79F1 /* AmountViewController.swift */; };
 		B48DBFEF1FABF2CD0007C315 /* CustomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DBFEE1FABF2CD0007C315 /* CustomExtensions.swift */; };
 		B4D0C52D1FC50BA300F36FDE /* QRCodeReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D0C52C1FC50BA300F36FDE /* QRCodeReceiveViewController.swift */; };
+		B4DBBB1E1FCE77C300E4C43A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4DBBB1D1FCE77C300E4C43A /* Login.storyboard */; };
+		B4DBBB201FCE80BD00E4C43A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DBBB1F1FCE80BD00E4C43A /* LoginViewController.swift */; };
 		B4E0279D1FABD17500E2EC97 /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0279C1FABD17500E2EC97 /* TransactionsViewController.swift */; };
 		B4EDF5021FB5239E00D66FE2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDF5011FB5239E00D66FE2 /* HistoryTableViewCell.swift */; };
 		B4EDF5041FB525BF00D66FE2 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EDF5031FB525BF00D66FE2 /* TransactionModel.swift */; };
@@ -34,6 +36,8 @@
 		B45183F81FB7A825001F79F1 /* AmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountViewController.swift; sourceTree = "<group>"; };
 		B48DBFEE1FABF2CD0007C315 /* CustomExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtensions.swift; sourceTree = "<group>"; };
 		B4D0C52C1FC50BA300F36FDE /* QRCodeReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReceiveViewController.swift; sourceTree = "<group>"; };
+		B4DBBB1D1FCE77C300E4C43A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B4DBBB1F1FCE80BD00E4C43A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4E0279C1FABD17500E2EC97 /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
 		B4EDF5011FB5239E00D66FE2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		B4EDF5031FB525BF00D66FE2 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				B48DBFEE1FABF2CD0007C315 /* CustomExtensions.swift */,
 				B41F39EA1FA94A0800731D09 /* Info.plist */,
 				B4EDF4FF1FB521CB00D66FE2 /* Supporting Files */,
+				B4DBBB1D1FCE77C300E4C43A /* Login.storyboard */,
+				B4DBBB1F1FCE80BD00E4C43A /* LoginViewController.swift */,
 			);
 			path = "UW-Pesa";
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DBBB1E1FCE77C300E4C43A /* Login.storyboard in Resources */,
 				B41F39E91FA94A0800731D09 /* LaunchScreen.storyboard in Resources */,
 				B41F39E61FA94A0800731D09 /* Assets.xcassets in Resources */,
 				B41F39E41FA94A0800731D09 /* Main.storyboard in Resources */,
@@ -178,6 +185,7 @@
 				B48DBFEF1FABF2CD0007C315 /* CustomExtensions.swift in Sources */,
 				B4E0279D1FABD17500E2EC97 /* TransactionsViewController.swift in Sources */,
 				B41F39F11FA9675400731D09 /* OptionTableViewCell.swift in Sources */,
+				B4DBBB201FCE80BD00E4C43A /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
